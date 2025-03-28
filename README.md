@@ -1,5 +1,5 @@
 # digits-recognizer
-this is an evaluation of kubeflow. that creates a digit recognizer model working on images. tested to work on kubeflow v1.9.1 with mnist.npz.
+this is an evaluation of kubeflow. creates a digit recognizer model working on images. tested to work on kubeflow v1.9.1 with mnist.npz.
 
 ## deploying kubeflow
 step 1
@@ -24,7 +24,11 @@ then open the dashboard on http://localhost:8000 and log in as user@example.com/
 
 ## exploration
 - create a new notebook and be sure to add `configuration->Allow access to kubeflow pipelines`.
-- wait for the notebook to become availabe.
+- wait for the notebook to become available, then connect.
+- open console in notebook, then
+```
+pip install minio
+```
 - drag/drop the .ipynb files into the files section on the left side.
 - digits_recognizer_notebook.ipynb is for expoloration purposes.
 
