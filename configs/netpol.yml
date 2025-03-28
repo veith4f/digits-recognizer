@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-mysql-access
+spec:
+  podSelector: {}  # Applies to all pods in the namespace
+  policyTypes:
+  - Egress
+  egress:
+  - to:
+    - namespaceSelector: {}  # Allows access to any namespace
+    ports:
+    - protocol: TCP
+      port: 3306  # MySQL port
